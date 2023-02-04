@@ -6,9 +6,11 @@ import Nav from './Components/Nav';
 import Cart from './Components/Cart';
 import ItemDetails from './Components/ItemDetail';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useImmer } from 'use-immer';
 
 export default function RouteSwitch() {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useImmer([]);
+  const [cartCount, setCartCount] = useState();
 
   return (
     <BrowserRouter>

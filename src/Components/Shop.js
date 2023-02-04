@@ -10,7 +10,9 @@ export default function Shop() {
   }, []);
 
   async function fetchItems() {
-    const fetchAPI = await fetch('https://fakestoreapi.com/products');
+    const fetchAPI = await fetch(
+      'https://fakestoreapi.com/products/category/electronics'
+    );
     const items = await fetchAPI.json();
     setItems(items);
   }

@@ -15,7 +15,6 @@ export default function ItemDetails({ cart, setCart }) {
     const fetchAPI = await fetch(`https://fakestoreapi.com/products/${id}`);
     const item = await fetchAPI.json();
     setItem(item);
-    console.log(item);
   }
 
   function handleAdd() {
@@ -26,8 +25,11 @@ export default function ItemDetails({ cart, setCart }) {
   }
 
   function handleAddToCart() {
-    setCart([...cart, { API: item, quantity: quantity }]);
-    console.log(cart);
+    if (quantity > 0) {
+      setCart((draft) => {
+        draft.push({ API: item, quantity: quantity });
+      });
+    }
   }
 
   return (
