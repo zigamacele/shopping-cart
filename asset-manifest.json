@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.f66a354c.css",
+    "main.js": "/shopping-cart/static/js/main.5a63b991.js",
+    "static/media/Home_Page_Best_Sell_2.webp": "/shopping-cart/static/media/Home_Page_Best_Sell_2.57fb2c71f415086ff9c8.webp",
+    "static/media/HP_full3.webp": "/shopping-cart/static/media/HP_full3.3458d60157e35b83a110.webp",
+    "static/media/Home_Page_Best_Sell_1.webp": "/shopping-cart/static/media/Home_Page_Best_Sell_1.5f10001019a4f5140257.webp",
+    "static/media/HP_full4.webp": "/shopping-cart/static/media/HP_full4.eefc737b2febda4ca602.webp",
+    "static/media/Hero_Banner.webp": "/shopping-cart/static/media/Hero_Banner.827c67c242ea95d6f972.webp",
+    "static/media/Shop.webp": "/shopping-cart/static/media/Shop.d6dcad998d7fa6d3744f.webp",
+    "static/media/HP_full2.webp": "/shopping-cart/static/media/HP_full2.9971abc8a7e4aaa49cd3.webp",
+    "static/media/HP_full1.webp": "/shopping-cart/static/media/HP_full1.d564632c3365d413eeb9.webp",
+    "static/media/logo-atlantic.webp": "/shopping-cart/static/media/logo-atlantic.04c6ac7cc6a0670f8808.webp",
+    "static/media/logo-vice.webp": "/shopping-cart/static/media/logo-vice.09d32e30d55adf1ca7e4.webp",
+    "static/media/logo-forbes.webp": "/shopping-cart/static/media/logo-forbes.5115c99907caeef26bf0.webp",
+    "static/media/logo-bustle.webp": "/shopping-cart/static/media/logo-bustle.23788ba6a7a77ce48fde.webp",
+    "static/media/logo-them.avif": "/shopping-cart/static/media/logo-them.894b6d6d40db0d9a8aa8.avif",
+    "static/media/ico-04.avif": "/shopping-cart/static/media/ico-04.6fad429a4269c6410b20.avif",
+    "static/media/ico-03.webp": "/shopping-cart/static/media/ico-03.36946fe65231df96f6c7.webp",
+    "static/media/ico-01.webp": "/shopping-cart/static/media/ico-01.dd38ec46c004857e3bd9.webp",
+    "static/media/ico-02.webp": "/shopping-cart/static/media/ico-02.e8b14ad6c1021d923bcb.webp",
+    "index.html": "/shopping-cart/index.html",
+    "main.f66a354c.css.map": "/shopping-cart/static/css/main.f66a354c.css.map",
+    "main.5a63b991.js.map": "/shopping-cart/static/js/main.5a63b991.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f66a354c.css",
+    "static/js/main.5a63b991.js"
+  ]
+}
