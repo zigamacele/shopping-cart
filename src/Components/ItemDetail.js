@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 export default function ItemDetails({ cart, setCart }) {
@@ -25,7 +26,8 @@ export default function ItemDetails({ cart, setCart }) {
   }
 
   function handleAddToCart() {
-    if (quantity > 0) {
+    console.log(item);
+    if (quantity > 0 && !cart.some((f) => f.API.id === item.id)) {
       setCart((draft) => {
         draft.push({ API: item, quantity: quantity });
       });
@@ -47,6 +49,9 @@ export default function ItemDetails({ cart, setCart }) {
         <button onClick={handleAdd}>+</button>
       </div>
       <button onClick={handleAddToCart}>Add to Cart</button>
+      <Link to={'/cart'}>
+        <button onClick={handleAddToCart}>Checkout</button>
+      </Link>
     </div>
   );
 }

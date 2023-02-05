@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Cart({ cart, setCart }) {
+  const [cartTotal, setCartTotal] = useState(0);
+
   function handleRemoveFromCart(id) {
     setCart(cart.filter((item) => item.API.id !== id));
   }
+
+  function sumTotal(items, prop, propQuantity) {
+    return items.reduce(function (acc, curr) {
+      console.log(curr[prop].price);
+      return acc + curr[propQuantity] * curr[prop].price;
+    }, 0);
+  }
+
+  useEffect(() => {
+    setCartTotal(sumTotal(cart, 'API', 'quantity'));
+  }, [cart]);
 
   function handleQuantityChange(e, index, item) {
     setCart((draft) => {
@@ -33,7 +46,7 @@ export default function Cart({ cart, setCart }) {
             <button onClick={() => handleRemoveFromCart(item.API.id)}>
               remove
             </button>
-            <div>
+            <div key={item.id}>
               <button onClick={() => handleSubtract(index, item)}>-</button>
               <input
                 onChange={(e) => handleQuantityChange(e, index, item)}
@@ -44,6 +57,7 @@ export default function Cart({ cart, setCart }) {
           </div>
         );
       })}
+      <div>Total: ${cartTotal}</div>
     </div>
   );
 }

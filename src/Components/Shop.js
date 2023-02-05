@@ -11,7 +11,7 @@ export default function Shop() {
 
   async function fetchItems() {
     const fetchAPI = await fetch(
-      'https://fakestoreapi.com/products/category/electronics'
+      "https://fakestoreapi.com/products/category/women's%20clothing"
     );
     const items = await fetchAPI.json();
     setItems(items);

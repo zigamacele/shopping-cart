@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export default function Nav() {
+export default function Nav({ cartCount }) {
   return (
     <div className="flex justify-between">
       <div className="text-3xl font-bold">Logo</div>
@@ -13,7 +13,7 @@ export default function Nav() {
           <div>Shop</div>
         </Link>
         <Link to={'/cart'}>
-          <div>Cart</div>
+          <div>Cart({cartCount})</div>
         </Link>
       </div>
     </div>
