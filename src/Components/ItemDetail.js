@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
+import { AiFillStar } from 'react-icons/ai';
 
 export default function ItemDetails({ cart, setCart }) {
   const [item, setItem] = useState([]);
@@ -35,23 +36,52 @@ export default function ItemDetails({ cart, setCart }) {
   }
 
   return (
-    <div>
-      <div key={item.id}>
-        {item.title}
-        <img alt={item.title} src={item.image} />
+    <div className="mt-4 mb-24 flex justify-center ">
+      <div key={item.id} className="flex gap-48">
+        <img alt={item.title} src={item.image} className="h-96 w-96" />
+        <div className="flex flex-col gap-3">
+          <p className="text-2xl">{item.title}</p>
+          <div className="flex items-center gap-3"></div>
+          <p className="font-light">$ {item.price}</p>
+
+          <hr class="w-96 h-0.5 mx-auto my-6  border-0 rounded  bg-gray-200" />
+          <div className="mb-2 flex justify-center items-center gap-3">
+            <button
+              onClick={handleSubtract}
+              className="border hover:bg-gray-200 text-black font-light py-2 px-4 border-gray-400 rounded text-sm"
+            >
+              -
+            </button>
+            <input
+              onChange={(e) => setQuantity(Number(e.target.value))}
+              value={quantity}
+              className="text-center bg-transparent border rounded w-72 h-10 "
+            />
+            <button
+              onClick={handleAdd}
+              className="border hover:bg-gray-200 text-black font-light py-2 px-4 border-gray-400 rounded text-sm"
+            >
+              +
+            </button>
+          </div>
+          <div className="flex flex-col gap-3 justify-center items-center">
+            <button
+              onClick={handleAddToCart}
+              className=" bg-theme hover:bg-gray-800 text-white font-light w-96 h-12 border-gray-400 rounded shadow text-sm"
+            >
+              Add to Cart
+            </button>
+            <Link to={'/cart'}>
+              <button
+                onClick={handleAddToCart}
+                className="border hover:bg-gray-200 text-black font-light w-96 h-12  border-gray-400 rounded shadow text-sm"
+              >
+                Checkout
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
-      <div>
-        <button onClick={handleSubtract}>-</button>
-        <input
-          onChange={(e) => setQuantity(Number(e.target.value))}
-          value={quantity}
-        />
-        <button onClick={handleAdd}>+</button>
-      </div>
-      <button onClick={handleAddToCart}>Add to Cart</button>
-      <Link to={'/cart'}>
-        <button onClick={handleAddToCart}>Checkout</button>
-      </Link>
     </div>
   );
 }

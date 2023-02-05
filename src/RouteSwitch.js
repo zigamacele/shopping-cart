@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Home from './Components/Home';
-import About from './Components/About';
 import Shop from './Components/Shop';
 import Nav from './Components/Nav';
 import Cart from './Components/Cart';
+import Footer from './Components/Footer';
 import ItemDetails from './Components/ItemDetail';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useImmer } from 'use-immer';
@@ -23,18 +23,27 @@ export default function RouteSwitch() {
   }, [cart]);
 
   return (
-    <BrowserRouter>
-      <Nav cartCount={cartCount} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route
-          path="/shop/:id"
-          element={<ItemDetails cart={cart} setCart={setCart} />}
-        />
-        <Route path="/cart" element={<Cart cart={cart} setCart={setCart} />} />
-      </Routes>
-    </BrowserRouter>
+    <div className="h-screen">
+      <BrowserRouter>
+        <Nav cartCount={cartCount} />
+        <div className="flex flex-col">
+          <div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route
+                path="/shop/:id"
+                element={<ItemDetails cart={cart} setCart={setCart} />}
+              />
+              <Route
+                path="/cart"
+                element={<Cart cart={cart} setCart={setCart} />}
+              />
+            </Routes>
+          </div>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
