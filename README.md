@@ -1,6 +1,6 @@
 # Shopping Cart
 
-Webstore wher u can browse and add selected items into your cart \
+Shopping website prototype where you can browse / add selected items into your cart.
 
 JS Framework: React\
 React Libraries: React Router, Immer, React-icons\
