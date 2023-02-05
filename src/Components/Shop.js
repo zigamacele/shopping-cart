@@ -26,7 +26,7 @@ export default function Shop() {
       <div className="flex justify-center items-center gap-10 mx-20 mb-36 ">
         {items.map((item) => {
           return (
-            <Link key={item.id} to={`/shop/${item.id}`}>
+            <Link key={item.id} to={`/shopping-cart/shop/${item.id}`}>
               <div key={item.id} className="flex flex-col">
                 <img
                   alt={item.title}

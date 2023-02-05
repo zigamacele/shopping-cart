@@ -29,14 +29,14 @@ export default function RouteSwitch() {
         <div className="flex flex-col">
           <div>
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/shop" element={<Shop />} />
+              <Route path="/shopping-cart" element={<Home />} />
+              <Route path="/shopping-cart/shop" element={<Shop />} />
               <Route
-                path="/shop/:id"
+                path="/shopping-cart/shop/:id"
                 element={<ItemDetails cart={cart} setCart={setCart} />}
               />
               <Route
-                path="/cart"
+                path="/shopping-cart/cart"
                 element={<Cart cart={cart} setCart={setCart} />}
               />
             </Routes>

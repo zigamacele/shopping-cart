@@ -96,7 +96,7 @@ export default function Cart({ cart, setCart }) {
           <p className="  text-gray-300 text-5xl font-serif mb-6">
             Your Cart is Empty!
           </p>
-          <Link to={'/shop'}>
+          <Link to={'/shopping-cart/shop'}>
             <button className="bg-theme hover:bg-gray-600 text-white font-light py-4 px-16  border-gray-400 rounded shadow text-sm mt-4">
               SHOP NOW
             </button>

@@ -28,7 +28,7 @@ export default function Home() {
           <p className="font-light">
             Clothing & accessories that let you express your authentic self.
           </p>
-          <Link to={'/shop'}>
+          <Link to={'/shopping-cart/shop'}>
             <button className="bg-white hover:bg-gray-100 text-gray-800 font-light py-4 px-16  border-gray-400 rounded shadow text-sm mt-4">
               SHOP NOW
             </button>
@@ -60,7 +60,7 @@ export default function Home() {
               Check out the latest and greatest in our
               <br /> menswear-inspired apparel and accessories.
             </p>
-            <Link to={'/shop'}>
+            <Link to={'/shopping-cart/shop'}>
               <button className="bg-white hover:bg-gray-100 text-gray-800 font-light py-4 px-16  border-gray-400 rounded shadow text-sm mt-4">
                 SHOP NOW
               </button>
@@ -79,7 +79,7 @@ export default function Home() {
               Check out the latest and greatest in our
               <br /> menswear-inspired apparel and accessories.
             </p>
-            <Link to={'/shop'}>
+            <Link to={'/shopping-cart/shop'}>
               <button className="bg-white hover:bg-gray-100 text-gray-800 font-light py-4 px-16  border-gray-400 rounded shadow text-sm mt-4">
                 SHOP NOW
               </button>
@@ -200,7 +200,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Link to={'/shop'}>
+        <Link to={'/shopping-cart/shop'}>
           <button className="mt-16 bg-black hover:bg-gray-800 text-white font-light py-4 px-16  border-gray-400 rounded shadow text-sm ">
             GO TO SHOP
           </button>

@@ -11,7 +11,7 @@ export default function Nav({ cartCount }) {
         <span className="font-bold">ALL</span> ORDERS{' '}
       </section>
       <div className="flex justify-between items-center mx-8 mb-4">
-        <Link to={'/'}>
+        <Link to={'/shopping-cart'}>
           <img
             className="h-12"
             alt="logo"
@@ -24,13 +24,13 @@ export default function Nav({ cartCount }) {
           </div>
           <IconContext.Provider value={{ size: '1.5em' }}>
             <Link
-              to={'/shop'}
+              to={'/shopping-cart/shop'}
               className="hover:cursor-pointer hover:text-theme"
             >
               <CiShop />
             </Link>
             <Link
-              to={'/cart'}
+              to={'/shopping-cart/cart'}
               className="hover:cursor-pointer hover:text-theme"
             >
               <div className="flex justify-center items-center h-2 gap-1">

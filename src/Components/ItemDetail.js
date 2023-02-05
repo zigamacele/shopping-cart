@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import { AiFillStar } from 'react-icons/ai';
 
 export default function ItemDetails({ cart, setCart }) {
   const [item, setItem] = useState([]);
@@ -71,7 +70,7 @@ export default function ItemDetails({ cart, setCart }) {
             >
               Add to Cart
             </button>
-            <Link to={'/cart'}>
+            <Link to={'/shopping-cart/cart'}>
               <button
                 onClick={handleAddToCart}
                 className="border hover:bg-gray-200 text-black font-light w-96 h-12  border-gray-400 rounded shadow text-sm"
